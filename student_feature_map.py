@@ -16,10 +16,10 @@ conv_layers = []
 for module in model.modules():
     if isinstance(module, nn.Conv2d):
         conv_layers.append(module)
-print(f"\nTotal convolutional layers: {len(conv_layers)}")
-print(f"Parameter count: {sum(p.numel() for p in model.parameters())}\n")
+print(f"\n> Total convolutional layers: {len(conv_layers)}")
+print(f"> Parameter count: {sum(p.numel() for p in model.parameters())}")
 
-image_path = "sample_img.png"
+image_path = "dataset/sample_img_for_fmaps.png"
 image = Image.open(image_path).convert("RGB")
 transform = transforms.ToTensor()
 input_tensor = transform(image).unsqueeze(0).to(device)  # [1, C, H, W]
@@ -66,5 +66,6 @@ for i, fmap in enumerate(processed_feature_maps):
     ax.set_title(titles[i], fontsize=10)
 
 plt.tight_layout()
-plt.savefig("feature_maps.png")
+print("> feature_maps.png saved in /dataset\n")
+plt.savefig("dataset/feature_maps.png")
 plt.show()

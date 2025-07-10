@@ -152,7 +152,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--student_model', type=str, default='s_weights/best_student_scripted.pt')
-    #parser.add_argument('--teacher_weights', type=str, default='MIMO-UNet.pkl')
+    #parser.add_argument('--teacher_weights', type=str, default='t_weights/MIMO-UNet.pkl')
     parser.add_argument('--data_dir', type=str, default='dataset/div2k')
     parser.add_argument('--num_test_images', type=int, default=100)
 

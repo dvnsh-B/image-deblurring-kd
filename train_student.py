@@ -141,7 +141,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--data_dir", type=str, default="dataset/div2k")
-    parser.add_argument("--teacher_weights", type=str, default="MIMO-UNet.pkl")
+    parser.add_argument("--teacher_weights", type=str, default="t_weights/MIMO-UNet.pkl")
     parser.add_argument("--save_dir", type=str, default="s_weights/")
     parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--batch_size", type=int, default=21)

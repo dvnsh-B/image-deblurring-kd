@@ -1,4 +1,5 @@
 .venv/
 venv/
-dataset/
 __pycache__/
+dataset/*
+!dataset/sample_img_for_fmaps.png
