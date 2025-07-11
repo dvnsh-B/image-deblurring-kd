@@ -1,6 +1,6 @@
 import torch
 from models.MIMOUNet import build_net
-from data import valid_dataloader
+from data.data_load import valid_dataloader
 from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 import numpy as np
 from tqdm import tqdm
