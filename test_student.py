@@ -6,10 +6,10 @@ import argparse
 import numpy as np
 from torch.backends import cudnn
 from skimage.metrics import peak_signal_noise_ratio, structural_similarity as ssim
-from data import test_dataloader
+from data.data_load import test_dataloader
 from contextlib import contextmanager
 #from models.MIMOUNet import build_net
-#from data import pad_to_multiple, crop_to_original
+#from data.padding import pad_to_multiple, crop_to_original
 
 @contextmanager
 def suppress_stderr():

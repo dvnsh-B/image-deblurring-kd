@@ -4,7 +4,7 @@ from data import valid_dataloader
 from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 import numpy as np
 from tqdm import tqdm
-#from data import pad_to_multiple, crop_to_original
+#from data.padding import pad_to_multiple, crop_to_original
 
 def evaluate_model(model, dataloader, device):
     model.eval()

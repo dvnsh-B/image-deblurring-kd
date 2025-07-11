@@ -4,12 +4,12 @@ import torch.nn as nn
 import torch.optim as optim
 from models.MIMOUNet import build_net
 from models.StudentNet import StudentNet
-from data import train_dataloader, valid_dataloader 
+from data.data_load import train_dataloader, valid_dataloader 
 from tqdm import tqdm
 from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 import numpy as np
 import torch.nn.functional as F
-#from data import pad_to_multiple, crop_to_original
+#from data.padding import pad_to_multiple, crop_to_original
 from piq import ssim as ssim_loss_fn, LPIPS
 import time
 
@@ -173,7 +173,8 @@ if __name__ == "__main__":
     dummy_input = torch.randn(1, 3, 1088, 1920).to(device).half()
 
     # Convert using torch.jit.script
-    with torch.no_grad():
-        scripted = torch.jit.script(model)
-    torch.jit.save(scripted, "s_weights/best_student_scripted.pt")
-    print("\n-- The scripted model for the same saved as best_student_scripted.pt --\n")
+    if os.path.exists("s_weights/best_student.pkl"):
+        with torch.no_grad():
+            scripted = torch.jit.script(model)
+        torch.jit.save(scripted, "s_weights/best_student_scripted.pt")
+        print("\n-- The scripted model for the same saved as best_student_scripted.pt --\n")
