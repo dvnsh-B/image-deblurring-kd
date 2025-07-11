@@ -97,3 +97,13 @@ StudentNet FPS range : 55-65 fps
 | :--: | :--: | 
 | <img width='99%' alt="Blurred_zoomed" src="https://github.com/user-attachments/assets/463dd50c-5ae9-4a77-8916-da2677bb1201" /> | <img width='95%' alt="Student_op_zoomed" src="https://github.com/user-attachments/assets/819c28be-4469-40dd-bf00-47ae8c96b7fe" /> | 
 | Blurred | StudentNet Output | 
+
+<br>
+
+## Demo 
+
+https://www.youtube.com/watch?v=AV7A3DCs9LQ  
+
+<br>
+
+---
