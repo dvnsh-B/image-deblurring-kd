@@ -45,7 +45,7 @@ Demo video: https://www.youtube.com/watch?v=AV7A3DCs9LQ
 
    ```python image_prep.py ```
 
-- After preparingdata set, the data folder should be like the format below:
+- The dataset folder should now look like this:
 
 ```
 ├─ dataset
